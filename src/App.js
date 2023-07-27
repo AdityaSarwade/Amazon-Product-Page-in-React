@@ -27,6 +27,7 @@ class App extends Component {
     if(nextState.currentPreviewImagePos === this.state.currentPreviewImagePos) {
       return false;
     }
+    return true;
   }
   
   render() {

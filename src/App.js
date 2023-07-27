@@ -16,15 +16,16 @@ class App extends Component {
 
   onColorOptionClick = (pos) => {
     this.setState({currentPreviewImagePos: pos});
-  }
+  };
 
   onFeatureItemClick = (pos) => {
     this.setState({currentSelectedFeature: pos});
-  }
+  };
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log("Change Detected -> Inside Should Component Update")
-    if(nextState.currentPreviewImagePos === this.state.currentPreviewImagePos) {
+    if(nextState.currentPreviewImagePos === this.state.currentPreviewImagePos &&
+      nextState.currentSelectedFeature === this.state.currentSelectedFeature) {
       return false;
     }
     return true;
